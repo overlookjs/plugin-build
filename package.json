@@ -15,7 +15,7 @@
     "lib/**/*.js",
     "es/**/*.js"
   ],
-  "sideEffects": false,
+  "sideEffects": true,
   "author": {
     "name": "Overlook Motel"
   },
@@ -27,10 +27,13 @@
     "url": "https://github.com/overlookjs/plugin-build/issues"
   },
   "dependencies": {
-    "@overlook/plugin": "^0.2.6"
+    "@overlook/plugin": "^0.2.6",
+    "@overlook/route": "^0.6.2",
+    "@overlook/util-make-symbols": "^0.2.1",
+    "class-extension": "^0.2.3",
+    "fs-extra": "^9.0.0"
   },
   "devDependencies": {
-    "@overlook/route": "^0.6.2",
     "@overlookmotel/eslint-config": "^7.1.2",
     "@overlookmotel/eslint-config-jest": "^4.0.1",
     "@overlookmotel/eslint-config-node": "^2.0.0",

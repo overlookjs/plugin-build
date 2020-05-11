@@ -10,5 +10,9 @@ import buildPlugin from '../lib/index.js';
 
 export default buildPlugin;
 export const {
-	TEMP
+	BUILD,
+	BUILD_ROUTE,
+	BUILD_CHILDREN,
+	MODULE,
+	IS_SHIMMED
 } = buildPlugin;
