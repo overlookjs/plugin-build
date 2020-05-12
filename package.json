@@ -30,10 +30,12 @@
     "@overlook/plugin": "^0.2.6",
     "@overlook/route": "^0.6.2",
     "@overlook/util-make-symbols": "^0.2.1",
-    "class-extension": "^0.2.3",
-    "fs-extra": "^9.0.0"
+    "class-extension": "^0.2.4",
+    "fs-extra": "^9.0.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
+    "@overlook/plugin-path": "^0.8.0",
     "@overlookmotel/eslint-config": "^7.1.2",
     "@overlookmotel/eslint-config-jest": "^4.0.1",
     "@overlookmotel/eslint-config-node": "^2.0.0",
