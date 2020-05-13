@@ -35,8 +35,7 @@
     "devalue": "^2.0.1",
     "fs-extra": "^9.0.0",
     "is-it-type": "^4.0.0",
-    "lodash": "^4.17.15",
-    "simple-invariant": "^2.0.0"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@overlook/load-routes": "^0.1.2",
