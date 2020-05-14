@@ -12,7 +12,5 @@ export default buildPlugin;
 export const {
 	BUILD,
 	BUILD_ROUTE,
-	BUILD_CHILDREN,
-	MODULE,
-	IS_SHIMMED
+	BUILD_CHILDREN
 } = buildPlugin;

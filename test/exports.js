@@ -15,9 +15,7 @@ module.exports = function itExports(buildPlugin) {
 		it.each([
 			'BUILD',
 			'BUILD_ROUTE',
-			'BUILD_CHILDREN',
-			'MODULE',
-			'IS_SHIMMED'
+			'BUILD_CHILDREN'
 		])('%s', (key) => {
 			expect(typeof buildPlugin[key]).toBe('symbol');
 		});
