@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@overlook/load-routes": "^0.1.2",
-    "@overlook/plugin-load": "^0.1.3",
+    "@overlook/plugin-load": "^0.2.0",
     "@overlook/plugin-path": "^0.8.0",
     "@overlookmotel/eslint-config": "^7.1.2",
     "@overlookmotel/eslint-config-jest": "^4.0.1",
@@ -54,7 +54,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.10.0",
+    "eslint-plugin-jest": "^23.13.0",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^26.0.1",
     "jest-extended": "^0.11.5",
