@@ -42,8 +42,8 @@
     "reserved-words": "^0.1.2"
   },
   "devDependencies": {
-    "@overlook/load-routes": "^0.1.2",
-    "@overlook/plugin-load": "^0.2.0",
+    "@overlook/load-routes": "^0.2.0",
+    "@overlook/plugin-load": "^0.3.0",
     "@overlook/plugin-path": "^0.8.0",
     "@overlookmotel/eslint-config": "^7.1.2",
     "@overlookmotel/eslint-config-jest": "^4.0.1",
