@@ -33,7 +33,7 @@
     "@overlook/plugin": "^0.2.7",
     "@overlook/route": "^0.6.2",
     "@overlook/symbol-store": "^1.0.0",
-    "@overlook/util-make-symbols": "^0.2.1",
+    "@overlook/util-make-symbols": "^0.2.2",
     "class-extension": "^0.2.4",
     "devalue": "^2.0.1",
     "fs-extra": "^9.0.0",
