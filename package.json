@@ -30,7 +30,7 @@
     "@babel/generator": "^7.9.6",
     "@babel/parser": "^7.9.6",
     "@babel/traverse": "^7.9.6",
-    "@overlook/plugin": "^0.2.6",
+    "@overlook/plugin": "^0.2.7",
     "@overlook/route": "^0.6.2",
     "@overlook/symbol-store": "^1.0.0",
     "@overlook/util-make-symbols": "^0.2.1",
