@@ -22,5 +22,22 @@ module.exports = {
 			'node/no-unsupported-features/es-syntax': ['error', {ignores: ['modules']}],
 			'node/no-unpublished-import': ['off']
 		}
+	}, {
+		files: ['build/**/*.js'],
+		rules: {
+			'import/no-extraneous-dependencies': 'off',
+			'node/no-extraneous-require': 'off',
+			'global-require': 'off',
+			'import/order': 'off',
+			'import/newline-after-import': 'off',
+			'object-shorthand': 'off',
+			'prefer-destructuring': 'off',
+			'prefer-arrow-callback': 'off',
+			'symbol-description': 'off',
+			'block-spacing': 'off',
+			'space-before-blocks': 'off',
+			'class-methods-use-this': 'off',
+			strict: 'off'
+		}
 	}]
 };
