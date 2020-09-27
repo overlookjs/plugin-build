@@ -173,13 +173,13 @@ describe('Files', () => {
 
 			const {WRITE_FILE, BUILD_FILE, READ_FILE: _READ_FILE} = buildPlugin;
 			const file1 = await root[WRITE_FILE]('html', '<h1>Hello</h1>\n');
-			root._file1 = file1;
+			root._file = file1;
 			root[BUILD_FILE](file1, '_static/foo.html');
 			const file2 = await child1[WRITE_FILE]('html', '<h1>Goodbye</h1>\n');
-			root._file2 = file2;
+			child1._file = file2;
 			child1[BUILD_FILE](file2);
 			const file3 = await child2[WRITE_FILE]('html', '<h1>Hello again</h1>\n');
-			root._file3 = file3;
+			child2._file = file3;
 			child2[BUILD_FILE](file3);
 
 			({app, buildPath, READ_FILE} = await buildAndRun(
@@ -197,28 +197,28 @@ describe('Files', () => {
 		});
 
 		it('relative paths set on file objects', async () => {
-			const file1 = app._file1;
+			const file1 = app._file;
 			expect(file1).toBeObject();
 			expect(file1.path).toBe('~/_static/foo.html');
 			expect(file1.content).toBeUndefined();
 
-			const file2 = app._file2;
+			const file2 = app.children[0]._file;
 			expect(file2).toBeObject();
 			expect(file2.path).toBe('~/_static/foo1.html');
 			expect(file2.content).toBeUndefined();
 
-			const file3 = app._file3;
+			const file3 = app.children[1]._file;
 			expect(file3).toBeObject();
 			expect(file3.path).toBe('~/_static/foo2.html');
 			expect(file3.content).toBeUndefined();
 		});
 
 		it('files can be read with `[READ_FILE]()`', async () => {
-			const content1 = await app[READ_FILE](app._file1);
+			const content1 = await app[READ_FILE](app._file);
 			expect(content1).toBe('<h1>Hello</h1>\n');
-			const content2 = await app[READ_FILE](app._file2);
+			const content2 = await app.children[0][READ_FILE](app.children[0]._file);
 			expect(content2).toBe('<h1>Goodbye</h1>\n');
-			const content3 = await app[READ_FILE](app._file3);
+			const content3 = await app.children[1][READ_FILE](app.children[1]._file);
 			expect(content3).toBe('<h1>Hello again</h1>\n');
 		});
 	});
