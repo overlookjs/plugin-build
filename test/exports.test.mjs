@@ -13,7 +13,7 @@ import itExports from './exports.js';
 
 // Tests
 
-describe('ESM export', () => { // eslint-disable-line jest/lowercase-name
+describe('ESM export', () => {
 	it('default export is an instance of Plugin class', () => {
 		expect(buildPlugin).toBeInstanceOf(Plugin);
 	});

@@ -10,5 +10,17 @@ import buildPlugin from '../lib/index.js';
 
 export default buildPlugin;
 export const {
-	TEMP
+	BUILD,
+	PRE_BUILD,
+	BUILD_FILE,
+	BUILD_FILES,
+	FS_ROOT_PATH,
+	deleteRouteProperties,
+	// From @overlook/plugin-fs
+	GET_FILE_PATH,
+	READ_FILE,
+	WRITE_FILE,
+	CREATE_VIRTUAL_PATH,
+	FS_FILES,
+	File
 } = buildPlugin;

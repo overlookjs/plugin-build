@@ -1,6 +1,6 @@
 /* --------------------
  * @overlook/plugin-build module
- * Tests
+ * Plugin tests
  * ------------------*/
 
 'use strict';
@@ -8,6 +8,7 @@
 // Modules
 const Plugin = require('@overlook/plugin'),
 	Route = require('@overlook/route'),
+	fsPlugin = require('@overlook/plugin-fs'),
 	buildPlugin = require('@overlook/plugin-build');
 
 // Init
@@ -15,15 +16,16 @@ require('./support/index.js');
 
 // Tests
 
-describe('Plugin', () => { // eslint-disable-line jest/lowercase-name
+describe('Plugin', () => {
 	it('is an instance of Plugin class', () => {
 		expect(buildPlugin).toBeInstanceOf(Plugin);
 	});
 
 	it('when passed to `Route.extend()`, returns subclass of Route', () => {
 		const BuildRoute = Route.extend(buildPlugin);
+		const FsRoute = Route.extend(fsPlugin);
 		expect(BuildRoute).toBeFunction();
-		expect(Object.getPrototypeOf(BuildRoute)).toBe(Route);
-		expect(Object.getPrototypeOf(BuildRoute.prototype)).toBe(Route.prototype);
+		expect(BuildRoute).toBeDirectSubclassOf(FsRoute);
+		expect(BuildRoute).toBeSubclassOf(Route);
 	});
 });

@@ -15,7 +15,7 @@ const itExports = require('./exports.js');
 
 // Tests
 
-describe('CJS export', () => { // eslint-disable-line jest/lowercase-name
+describe('CJS export', () => {
 	it('is an instance of Plugin class', () => {
 		expect(buildPlugin).toBeInstanceOf(Plugin);
 	});

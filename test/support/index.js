@@ -11,3 +11,9 @@
 process.on('unhandledRejection', (err) => {
 	throw err;
 });
+
+// Exports
+
+module.exports = {
+	spy: jest.fn
+};

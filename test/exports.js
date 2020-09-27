@@ -11,19 +11,29 @@
 // Exports
 
 module.exports = function itExports(buildPlugin) {
-	describe.skip('methods', () => { // eslint-disable-line jest/no-disabled-tests
+	describe('symbols', () => {
 		it.each([
-			'TEMP'
+			'BUILD',
+			'PRE_BUILD',
+			'BUILD_FILE',
+			'BUILD_FILES',
+			'FS_ROOT_PATH',
+			'GET_FILE_PATH',
+			'READ_FILE',
+			'WRITE_FILE',
+			'CREATE_VIRTUAL_PATH',
+			'FS_FILES'
 		])('%s', (key) => {
-			expect(buildPlugin[key]).toBeFunction();
+			expect(typeof buildPlugin[key]).toBe('symbol');
 		});
 	});
 
-	describe('symbols', () => {
+	describe('properties', () => {
 		it.each([
-			'TEMP'
+			'deleteRouteProperties',
+			'File'
 		])('%s', (key) => {
-			expect(typeof buildPlugin[key]).toBe('symbol');
+			expect(buildPlugin[key]).toBeFunction();
 		});
 	});
 };
