@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+Bug fixes:
+
+* Resolve file path on child routes
+
 ## 0.1.1
 
 Bug fixes:
